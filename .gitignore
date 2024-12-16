@@ -1,0 +1,27 @@
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files.
+# 
+# Learn more about Visual Studio .gitignore:
+# https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+
+## Ignore Visual Studio temporary files
+*.user
+*.userosscache
+*.suo
+*.unsuccessfulbuild
+*.pdb
+*.opendb
+
+## Ignore build output
+bin/
+obj/
+*.log
+
+## Ignore Visual Studio working directories
+.vscode/
+.vs/
+
+## Ignore temporary files
+_Temp/
+**/*.log
+
