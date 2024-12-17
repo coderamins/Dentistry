@@ -3,17 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - دندان سازی فیضی</title>
+    <title>@ViewData["Title"] - دندان سازی صلحی</title>
     <link href="~/lib/bootstrap/dist/bootstrap-rtl/css/bootstrap-rtl.min.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Dentistry.WebUI.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">دندان سازی فیضی</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">دندان سازی صلحی</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -46,15 +47,47 @@
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer bg-white text-black mt-4 pt-5">
         <div class="container">
-            سال 1403 - <a asp-area="" asp-page="/Privacy">تمامی حقوق متعلق به وب سایت دندان سازی فیضی می باشد</a>
+            <div class="row">
+                <!-- بخش اول -->
+                <div class="col-md-4">
+                    <h5>خدمات</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="">ساخت پروتزهای متحرک</a></li>
+                        <li><a href="#" class="">دندان مصنوعی ژله ای</a></li>
+                        <li><a href="#" class="">ساخت دستگاههای ارتودنسی</a></li>
+                    </ul>
+                </div>
+                <!-- بخش دوم -->
+                <div class="col-md-4">
+                    <h5>ارتباط با ما</h5>
+                    <p>از شنبه تا پنچشنبه 9 صبح تا 5 بعد از ظهر</p>
+                    <p>آدرس : تهران، سعادت آباد، بلوار پاکنژاد (شاهنامه)، قبل از میدان بهرود، خیابان هفدهم،  کوچه بیست و یکم پلاک 11</p>
+                    <div><span>تلفن تماس :</span>09129993333</div>
+                    <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i> فیسبوک</a>
+                    <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i> توییتر</a>
+                    <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i> اینستاگرام</a>
+                </div>
+
+                <!-- بخش سوم -->
+                <div class="col-md-4">
+                    <h5>بخش دوم</h5>
+                    <p>دندانسازی صلحی اولین لابراتوار فوق تخصصی ساخت دندان مصنوعی متحرک در ایران می باشد که دارای تجهیزات پیشرفته آلمانی و سوئیسی است.  این مرکز قادر به ساخت انواع دست دندان مصنوعی پروتز ثابت و متحرک ، دندان مصنوعی پارسیل یا تکه ای انواع فلیپر و روکش دندان با بهترین کیفیت حتی برای افراد فاقد لثه و دارای لثه صاف نیز می باشد. .</p>
+                </div>
+
+            </div>
+            <hr class="my-3" />
+            <div class="text-center">
+                <p class="mb-0">&copy; @DateTime.Now.Year - کلیه حقوق محفوظ است.</p>
+            </div>
         </div>
     </footer>
 
@@ -63,18 +96,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
-
-    <script>
-        $(function () {
-            var carouselEl = $('.carousel');
-            var carouselItems = carouselEl.find('.carousel-item');
-            $("#HeaderLogoId").val(carouselItems.siblings('.active').find("img").attr("id"));
-            carouselEl.carousel({
-                interval: 2000
-            }).on('slid.bs.carousel', function (event) {
-                $("#HeaderLogoId").val(carouselItems.siblings('.active').find("img").attr("id"));
-            })
-        })
-    </script>
 </body>
 </html>

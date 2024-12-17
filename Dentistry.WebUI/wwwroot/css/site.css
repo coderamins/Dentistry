@@ -15,12 +15,16 @@ html {
     font-family: 'dentistry';
     src: url('../fonts/woff/peydaweb-regular.woff') format('woff');
 }
-html {
-  position: relative;
-  min-height: 100%;
-}
+
 
 body {
-  margin-bottom: 60px;
   font-family:'dentistry';
+}
+
+.footer{
+    position:unset !important;
+}
+a{
+    text-decoration:none;
+    color:black !important;
 }
