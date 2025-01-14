@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "ثبت سفارش دندان سازی";
+}
+
+<div class="row">
+    <div class="form-group">
+        <label for="PatientName">نام و نام خانوادگی بیمار :</label>
+        <input type="text" class="form-control" id="PatientName" name="PatientName" required />
+    </div>
+    <div class="form-group">
+        <label for="DoctorName">نام و نام خانوادگی پزشک</label>
+        <input type="text" class="form-control" id="DoctorName" name="DoctorName" required />
+    </div>
+    <div class="form-group">
+        <label for="Description">توضیحات</label>
+        <textarea class="form-control" id="Description" name="Description" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">ثبت سفارش</button>
+
+</div>
