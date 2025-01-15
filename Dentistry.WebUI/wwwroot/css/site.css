@@ -4,7 +4,7 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -13,7 +13,7 @@ html {
 }
 @font-face {
     font-family: 'dentistry';
-    src: url('../fonts/woff/peydaweb-regular.woff') format('woff');
+    src: url('../fonts/eot/Yekan.woff') format('woff');
 }
 
 
