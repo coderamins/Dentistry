@@ -5,6 +5,10 @@
     {
       "library": "bootstrap-rtl@3.4.0",
       "destination": "wwwroot/lib/bootstrap/dist/bootstrap-rtl/"
+    },
+    {
+      "library": "tailwindcss@2.2.19",
+      "destination": "wwwroot/tailwindcss/"
     }
   ]
 }

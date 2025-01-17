@@ -1,0 +1,28 @@
+﻿@page
+@model Dentistry.WebUI.Pages.LoginModel
+@{
+}
+
+<form method="post">
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="form-group pb-3">
+                <label for="Username" class="pb-1">نام کاربری</label>
+                <input type="text" class="form-control" id="Username" name="Username" value="@Model.Username" required />
+            </div>
+            <div class="form-group pb-3">
+                <label for="Password" class="pb-1">رمز عبور</label>
+                <input type="password" class="form-control" id="Password" name="Password" value="@Model.Password" required />
+            </div>
+
+            @if (Model.ErrorMessage != null)
+            {
+                <div class="alert alert-danger">
+                    @Model.ErrorMessage
+                </div>
+            }
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">ورود</button>
+
+</form>

@@ -1,4 +1,7 @@
 ﻿using Dentistry.Infrastructure;
+using Dentistry.Infrastructure.Seeds;
+using Dentistry.WebUI.Helpers;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +10,8 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 
 var app = builder.Build();
 
@@ -22,5 +27,13 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
+using(var scope=scopeFactory.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    await DefaultOrderStatus.SeedAsync(dbContext);
+}
 
 app.Run();

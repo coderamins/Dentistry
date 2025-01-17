@@ -6,76 +6,74 @@
 
 <form method="post">
 
-<div class="row">
-    <h4>اطلاعات بیمار</h4>
-    <hr />
-
     <div class="row">
-        <div class="col-lg-4">
-            <div class="form-group pb-2">
-                <label for="PatientNationalId">کد ملی بیمار :</label>
-                <input type="text" class="form-control" id="PatientNationalId" name="PatientNationalId" required />
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="form-group pb-2">
-                <label for="PatientFullName">نام و نام خانوادگی بیمار :</label>
-                <input type="text" class="form-control" id="PatientFullName" name="PatientFullName" required />
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="form-group pb-2">
-                <label for="PatientMobileNo">شماره موبایل بیمار</label>
-                <input type="text" class="form-control" id="PatientMobileNo" name="PatientMobileNo" required />
-            </div>
-        </div>
-    </div>
+        <h4>اطلاعات بیمار</h4>
+        <hr />
 
-    <h4>اطلاعات پزشک</h4>
-    <hr />
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group pb-2">
+                    <label for="PatientNationalId">کد ملی بیمار :</label>
+                    <input type="text" class="form-control" id="PatientNationalId" name="PatientNationalId" required />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group pb-2">
+                    <label for="PatientFullName">نام و نام خانوادگی بیمار :</label>
+                    <input type="text" class="form-control" id="PatientFullName" name="PatientFullName" required />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group pb-2">
+                    <label for="PatientMobileNo">شماره موبایل بیمار</label>
+                    <input type="text" class="form-control" id="PatientMobileNo" name="PatientMobileNo" required />
+                </div>
+            </div>
+        </div>
 
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="form-group pb-2">
-                <label for="DentistName">نام و نام خانوادگی پزشک</label>
-                <input type="text" class="form-control" id="DentistName" name="DentistName" required />
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="form-group pb-2">
-                <label for="DentistMobileNo">شماره موبایل پزشک :</label>
-                <input type="text" class="form-control" id="DentistMobileNo" name="DentistMobileNo" required />
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="form-group pb-2">
-                <label for="Specialty">تخصص پزشک</label>
-                <input type="text" class="form-control" id="Specialty" name="Specialty" required />
-            </div>
-        </div>
-    </div>
+        <h4>اطلاعات پزشک</h4>
+        <hr />
 
-    <div class="col-lg-8">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group pb-2">
+                    <label for="DentistName">نام و نام خانوادگی پزشک</label>
+                    <input type="text" class="form-control" id="DentistName" name="DentistName" required />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group pb-2">
+                    <label for="DentistMobileNo">شماره موبایل پزشک :</label>
+                    <input type="text" class="form-control" id="DentistMobileNo" name="DentistMobileNo" required />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group pb-2">
+                    <label for="Specialty">تخصص پزشک</label>
+                    <input type="text" class="form-control" id="Specialty" name="Specialty" required />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="form-group pb-2">
+                <label for="Description">آدرس </label>
+                <input type="text" class="form-control" id="Address" name="Address" required />
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="form-group pb-2">
+                <label for="Description">توضیحات</label>
+                <textarea class="form-control" id="Description" name="Description" required></textarea>
+            </div>
+        </div>
+
         <div class="form-group pb-2">
-            <label for="Description">آدرس </label>
-            <input type="text" class="form-control" id="Address" name="Address" required />
+            <button type="submit" class="btn btn-primary">ثبت سفارش</button>
         </div>
     </div>
-    <div class="col-lg-9">
-        <div class="form-group pb-2">
-            <label for="Description">توضیحات</label>
-            <textarea class="form-control" id="Description" name="Description" required></textarea>
-        </div>
-    </div>
-
-    <div class="form-group pb-2">
-        <button type="submit" class="btn btn-primary">ثبت سفارش</button>
-    </div>
-
 </form>
-
-</div>

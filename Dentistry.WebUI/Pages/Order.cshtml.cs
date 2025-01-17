@@ -19,7 +19,17 @@ namespace Dentistry.WebUI.Pages
         [BindProperty]
         public DentalOrderDto Order { get; set; }
 
-        public IActionResult OnPost()
+        public void OnPost()
+        {
+
+        }
+
+        public void OnGet()
+        {
+
+        }
+
+        public IActionResult OnPost1()
         {
             if (ModelState.IsValid)
             {

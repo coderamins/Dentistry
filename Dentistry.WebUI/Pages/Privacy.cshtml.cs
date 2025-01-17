@@ -15,6 +15,11 @@ namespace Dentistry.WebUI.Pages
         public void OnGet()
         {
         }
+
+        public void OnPost()
+        {
+            string dd = "";
+        }
     }
 
 }
