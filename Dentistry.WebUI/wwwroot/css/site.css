@@ -13,12 +13,12 @@ html {
 }
 @font-face {
     font-family: 'dentistry';
-    src: url('../fonts/woff/PeydaWeb-Medium.woff') format('woff');
+    src: url('../fonts/kalameh/KalamehWebFaNum-Regular.woff2') format('woff');
 }
 
 
 body {
-  font-family:'dentistry';
+    font-family: 'dentistry' !important;
 }
 
 .footer{
@@ -28,7 +28,11 @@ a{
     text-decoration:none;
     color:black !important;
 }
-
+.navbar-brand
+{
+    font-size:17px !important;
+    color:#082b8b !important; 
+}
 .table {
     --falcon-table-color-type: initial;
     --falcon-table-bg-type: initial;
@@ -426,4 +430,10 @@ a{
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.col-inner
+{
+    text-align:center !important;
+    align-items:center !important;
 }

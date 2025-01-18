@@ -9,24 +9,25 @@
 {
     <div class="row">
         <div class="col-lg-4">
-            <div class="form-group pb-3">
-                <label for="DentistNameFilter">نام دندانپزشک</label>
-                <input type="text" id="DentistNameFilter" name="DentistNameFilter" class="form-control" value="@Model.DentistNameFilter" placeholder="نام دندانپزشک را وارد کنید" />
+            <div class="w-full">
+                <label for="DentistNameFilter" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">نام دندانپزشک</label>
+                <input type="text" name="DentistNameFilter" id="DentistNameFilter" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required="">
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-3">
-
-            <div class="form-group pb-3">
-                <label for="StartDateFilter">تاریخ شروع</label>
-                <input type="date" id="StartDateFilter" name="StartDateFilter" class="form-control" value="@Model.StartDateFilter?.ToString("yyyy-MM-dd")" />
+            <div class="w-full">
+                <label for="StartDateFilter" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">تاریخ شروع</label>
+                <input type="text" name="StartDateFilter" id="StartDateFilter" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required="">
             </div>
         </div>
         <div class="col-lg-3">
             <div class="form-group pb-3">
-                <label for="EndDateFilter">تاریخ پایان</label>
-                <input type="date" id="EndDateFilter" name="EndDateFilter" class="form-control" value="@Model.EndDateFilter?.ToString("yyyy-MM-dd")" />
+                <div class="w-full">
+                    <label for="EndDateFilter" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">تاریخ پایان</label>
+                    <input type="text" name="EndDateFilter" id="EndDateFilter" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required="">
+                </div>
             </div>
         </div>
     </div>
