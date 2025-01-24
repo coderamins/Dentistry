@@ -64,63 +64,51 @@
             @RenderBody()
         </main>
 
-@*         <footer class="border-top footer bg-white text-black mt-4 pt-5">
-            <div class="container">
-                <div class="row">
-                    <!-- بخش اول -->
-                    <div class="col-md-4">
-                        <h5>خدمات</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="">ساخت پروتزهای متحرک</a></li>
-                            <li><a href="#" class="">دندان مصنوعی ژله ای</a></li>
-                            <li><a href="#" class="">ساخت دستگاههای ارتودنسی</a></li>
-                        </ul>
-                    </div>
-                    <!-- بخش دوم -->
-                    <div class="col-md-4">
-                        <h5>ارتباط با ما</h5>
-                        <p>از شنبه تا پنچشنبه 9 صبح تا 5 بعد از ظهر</p>
-                        <p>آدرس : تهران، سعادت آباد، بلوار پاکنژاد (شاهنامه)، قبل از میدان بهرود، خیابان هفدهم،  کوچه بیست و یکم پلاک 11</p>
-                        <div><span>تلفن تماس :</span>09129993333</div>
-                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i> فیسبوک</a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i> توییتر</a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i> اینستاگرام</a>
-                    </div>
-
-                    <!-- بخش سوم -->
-                    <div class="col-md-4">
-                        <h5>بخش دوم</h5>
-                        <p class="flex-lg-wrap flex-wrap">دندانسازی صلحی اولین لابراتوار فوق تخصصی ساخت دندان مصنوعی متحرک در ایران می باشد که دارای تجهیزات پیشرفته آلمانی و سوئیسی است.  این مرکز قادر به ساخت انواع دست دندان مصنوعی پروتز ثابت و متحرک ، دندان مصنوعی پا
-                    </div>
-
-                </div>
-                <hr class="my-3" />
-                <div class="text-center">
-                    <p class="mb-0">&copy; @DateTime.Now.Year - کلیه حقوق محفوظ است.</p>
-                </div>
-            </div>
-        </footer>
- *@
-
-
 
         <footer class="bg-white dark:bg-gray-900">
             <div class="mx-auto w-full max-w-screen-xl">
                 <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">دندان سازی صلحی</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">دسترسی سریع</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="#" class=" hover:underline">درباره ما</a>
+                                <a class="hover:underline" asp-area="" asp-page="/aboutus">درباره ما</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">نمونه کارها</a>
+                                <a class="hover:underline" asp-area="" asp-page="/portfolio">گالری تصاویر</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">دندان مصنوعی</a>
+                                <a class="hover:underline" asp-area="" asp-page="/portfolio">دندادن مصنوعی</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">وبلاگ</a>
+                                <a class="hover:underline" asp-area="" asp-page="/contactus">ارتباط با ما</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">مقالات</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">دندان سازی</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">ارتباط با ما</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <p href="#" class="hover:underline">
+
+                                    آدرس : تهران، سعادت آباد، بلوار پاکنژاد (شاهنامه)، قبل از میدان بهرود، خیابان هفدهم،  کوچه بیست و یکم پلاک 11
+                                </p>
+                            </li>
+                            <li class="mb-4">
+                                <p>
+                                    ساعت کاری : 11 صبح الی 16 عصر
+                                </p>
+                            </li>
+                            <li class="mb-4">
+                               <i class="fa fa-phone"></i> <span>09337176453</span>
                             </li>
                         </ul>
                     </div>
@@ -138,37 +126,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Privacy Policy</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Licensing</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">iOS</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Android</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Windows</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">MacOS</a>
-                            </li>
-                        </ul>
-                    </div>
+
                 </div>
                 <div class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
                     <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
