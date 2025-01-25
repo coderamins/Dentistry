@@ -11,6 +11,7 @@ namespace Dentistry.Infrastructure
         public DbSet<Patient> Patients { get; set; }   
         public DbSet<DentalOrder> DentalOrders { get; set; }
         public DbSet<OrderStatus> OrderStatus {  get; set; }
+        public DbSet<User> Users {  get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

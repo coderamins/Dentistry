@@ -1,79 +1,67 @@
 ﻿@page
-@model IndexModel
+@model Dentistry.WebUI.Pages.OrderModel
 @{
-    ViewData["Title"] = "ثبت سفارش دندان سازی";
+
 }
 
-<form method="post">
+<section class="bg-white dark:bg-gray-900">
 
-    <div class="row">
-        <h4 classs="pb-5">اطلاعات بیمار</h4>
-        <hr class="mb-3" />
+    <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+          @if (Model.OrderCode>0)
+        {
+            <div class="alert alert-success mt-3">
+                سفارش شما با شماره @Model.OrderCode ثبت شد .
+            </div>
+        }
+          
 
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="form-group pb-2">
-                    <label for="PatientNationalId">کد ملی بیمار :</label>
-                    <input type="text" class="form-control" id="PatientNationalId" name="PatientNationalId" required />
+        <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">ثبت سفارش جدید</h2>
+        <form method="post">
+            <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                <div class="sm:col-span-2">
+                    <label for="PatientNationalId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">کد ملی بیمار</label>
+                    <input type="text" name="PatientNationalId" id="PatientNationalId"
+                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="کد ملی بیمار" required="">
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="form-group pb-2">
-                    <label for="PatientFullName">نام و نام خانوادگی بیمار :</label>
-                    <input type="text" class="form-control" id="PatientFullName" name="PatientFullName" required />
+                <div class="w-full">
+                    <label for="PatientFullName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">نام و نام خانوادگی بیمار</label>
+                    <input type="text" name="PatientFullName" id="PatientFullName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="نام و نام خانوادگی بیمار" required="">
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="form-group pb-2">
-                    <label for="PatientMobileNo">شماره موبایل بیمار</label>
-                    <input type="text" class="form-control" id="PatientMobileNo" name="PatientMobileNo" required />
+                <div class="w-full">
+                    <label for="PatientMobileNo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">شماره موبایل بیمار</label>
+                    <input type="number" name="PatientMobileNo" id="PatientMobileNo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="شماره موبایل بیمار" required="">
                 </div>
-            </div>
-        </div>
+                <div class="w-full">
+                    <label for="DentistName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">نام و نام خانوادگی پزشک</label>
+                    <input type="text" name="DentistName" id="DentistName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="نام و نام خانوادگی پزشک" required="">
+                </div>
+                <div class="w-full">
+                    <label for="DentistMobileNo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">شماره موبایل پزشک</label>
+                    <input type="number" name="DentistMobileNo" id="DentistMobileNo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="شماره موبایل بیمار" required="">
+                </div>
+                <div class="w-full">
+                    <label for="Specialty" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">تخصص پزشک</label>
+                    <input type="text" name="Specialty" id="Specialty" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="تخصص پزشک" required="">
+                </div>
+                <div class="w-full">
+                    <label for="Address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">آدرس</label>
+                    <input type="text" name="Address" id="Address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="آدرس" required="">
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">توضیحات</label>
+                    <textarea id="description" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="توضیحات"></textarea>
+                </div>
+                <button type="submit" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">تایید و ارسال سفارش</button>
 
-        <h4 class="mt-3">اطلاعات پزشک</h4>
-        <hr class="mb-3" />
+            </div>
+        </form>
 
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="form-group pb-2">
-                    <label for="DentistName">نام و نام خانوادگی پزشک</label>
-                    <input type="text" class="form-control" id="DentistName" name="DentistName" required />
-                </div>
+        @if (Model.OrderCode>0)
+        {
+            <div class="alert alert-success mt-3">
+                سفارش شما با شماره @Model.OrderCode ثبت شد .
             </div>
-            <div class="col-lg-4">
-                <div class="form-group pb-2">
-                    <label for="DentistMobileNo">شماره موبایل پزشک :</label>
-                    <input type="text" class="form-control" id="DentistMobileNo" name="DentistMobileNo" required />
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="form-group pb-2">
-                    <label for="Specialty">تخصص پزشک</label>
-                    <input type="text" class="form-control" id="Specialty" name="Specialty" required />
-                </div>
-            </div>
-        </div>
+        }
 
-        <div class="col-lg-8">
-            <div class="form-group pb-2">
-                <label for="Description">آدرس </label>
-                <input type="text" class="form-control" id="Address" name="Address" required />
-            </div>
-        </div>
-        <div class="col-lg-9">
-            <div class="form-group pb-2">
-                <label for="Description">توضیحات</label>
-                <textarea class="form-control" id="Description" name="Description" required></textarea>
-            </div>
-        </div>
-
-        <div class="form-group pb-2">
-            <button type="submit" class="btn btn-primary">ثبت سفارش</button>
-        </div>
     </div>
-</form>
+</section>

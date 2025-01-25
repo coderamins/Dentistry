@@ -2,12 +2,14 @@
 using Dentistry.Domain.Entity;
 using Dentistry.Domain.ViewModels;
 using Dentistry.Infrastructure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace Dentistry.WebUI.Pages
 {
+    [Authorize]
     public class OrderListModel : PageModel
     {
         private readonly ApplicationDbContext _context;

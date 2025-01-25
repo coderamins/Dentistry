@@ -30,22 +30,22 @@
                             <a class="nav-link text-dark" asp-page="/Index">صفحه نخست</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-page="/Order">دندان مصنوعی</a>
+                            <a class="nav-link text-dark" asp-page="">دندان مصنوعی</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-page="/Privacy">روکش دندان</a>
+                            <a class="nav-link text-dark" asp-page="">روکش دندان</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-page="/Privacy">رضایت بیمار</a>
+                            <a class="nav-link text-dark" asp-page="">رضایت بیمار</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-page="/Privacy">گالری تصاویر</a>
+                            <a class="nav-link text-dark" asp-page="">گالری تصاویر</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-page="/Order">سفارش دندان سازی</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-page="/Privacy">مقالات آموزشی</a>
+                            <a class="nav-link text-dark" asp-page="/ContactUs">ارتباط با ما</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-page="/AboutUs">تماس با ما</a>
@@ -53,7 +53,14 @@
                     </ul>
                 </div>
                 <div class="left-0">
-                    تماس با کلینیک<i class="fa fa-phone"></i> <b>66254905</b>
+                    @if (User.Identity?.IsAuthenticated ?? false)
+                    {
+                       <div> <i class="">مدیر سایت:</i> <span>@User.Identity.Name</span>|<span><a asp-page="logout">خروج</a></span></div>
+                    }
+                    else
+                    {
+                        <div>تماس با کلینیک<i class="fa fa-phone"></i> <b>66254905</b></div>
+                    }
                 </div>
             </div>
         </nav>
@@ -81,7 +88,7 @@
                                 <a class="hover:underline" asp-area="" asp-page="/portfolio">دندادن مصنوعی</a>
                             </li>
                             <li class="mb-4">
-                                <a class="hover:underline" asp-area="" asp-page="/contactus">ارتباط با ما</a>
+                                <a class="hover:underline" asp-area="" asp-page="/ContactUs">ارتباط با ما</a>
                             </li>
                         </ul>
                     </div>
@@ -108,7 +115,7 @@
                                 </p>
                             </li>
                             <li class="mb-4">
-                               <i class="fa fa-phone"></i> <span>09337176453</span>
+                                <i class="fa fa-phone"></i> <span>09337176453</span>
                             </li>
                         </ul>
                     </div>
